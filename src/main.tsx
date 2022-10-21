@@ -40,7 +40,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Jua';
-  background: ${(props) => props.theme.color.bgColor};
+  background: linear-gradient(135deg, rgb(107, 173, 235), rgb(54, 238, 198));
   color: ${(props) => props.theme.color.textColor};
 }
 ol, ul {

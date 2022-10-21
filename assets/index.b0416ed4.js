@@ -60,7 +60,7 @@ Error generating stack: `+i.message+`
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  background-color: ${e=>e.lottoNum<11?e.theme.color.lotto1:e.lottoNum>11&&e.lottoNum<21?e.theme.color.lotto2:e.lottoNum>21&&e.lottoNum<31?e.theme.color.lotto3:e.lottoNum>31&&e.lottoNum<41?e.theme.color.lotto4:e.theme.color.lotto5};
+  background-color: ${e=>e.lottoNum<11?e.theme.color.lotto1:e.lottoNum>=11&&e.lottoNum<21?e.theme.color.lotto2:e.lottoNum>=21&&e.lottoNum<31?e.theme.color.lotto3:e.lottoNum>=31&&e.lottoNum<41?e.theme.color.lotto4:e.theme.color.lotto5};
   display: flex;
   justify-content: center;
   align-items: center;

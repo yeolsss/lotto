@@ -17,11 +17,11 @@ const LottoCircle = styled.div<{ lottoNum: number }>`
   background-color: ${(props) =>
     props.lottoNum < 11
       ? props.theme.color.lotto1
-      : props.lottoNum > 11 && props.lottoNum < 21
+      : props.lottoNum >= 11 && props.lottoNum < 21
       ? props.theme.color.lotto2
-      : props.lottoNum > 21 && props.lottoNum < 31
+      : props.lottoNum >= 21 && props.lottoNum < 31
       ? props.theme.color.lotto3
-      : props.lottoNum > 31 && props.lottoNum < 41
+      : props.lottoNum >= 31 && props.lottoNum < 41
       ? props.theme.color.lotto4
       : props.theme.color.lotto5};
   display: flex;

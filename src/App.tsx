@@ -2,8 +2,6 @@ import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
 import { ILotto, lottoState } from './Atoms/atoms';
 import Lotto from './Components/Lotto';
-import { useQuery } from 'react-query';
-import { createLottoNum } from './Api/api';
 
 const Wrapper = styled.div`
   width: 100vw;

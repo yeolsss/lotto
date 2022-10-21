@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
 import styled from 'styled-components';
 import { ILotto } from '../Atoms/atoms';
-import LottoNum from './LottoNum';
 
 const LottoNumBox = styled.div`
   display: flex;

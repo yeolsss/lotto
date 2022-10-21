@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
 import { ILotto, lottoState } from './Atoms/atoms';
@@ -5,21 +6,23 @@ import Lotto from './Components/Lotto';
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const LottoBox = styled.div`
-  width: 700px;
-  height: 800px;
+  width: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0px 25px;
+  padding: 10px 25px;
+  overflow-y: hidden;
+  overflow: scroll;
+  margin-top: 50px;
   margin-bottom: 50px;
 `;
 
@@ -29,9 +32,19 @@ const CreateLottoBtn = styled.button`
   padding: 20px 40px;
   border-radius: 15px;
   cursor: pointer;
+
+  margin-bottom: 50px;
 `;
 
 function App() {
+  function setScreenSize() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  useEffect(() => {
+    setScreenSize();
+  }, []);
+
   const [lotto, setLotto] = useRecoilState(lottoState);
 
   const onCreateLotto = () => {

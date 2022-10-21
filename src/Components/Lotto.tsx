@@ -3,11 +3,12 @@ import { ILotto } from '../Atoms/atoms';
 
 const LottoNumBox = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 25px;
-  width: inherit;
-  padding: 0px 15px;
+  width: 100%;
+  @media screen and (max-width: 720px) {
+  }
 `;
 
 const LottoCircle = styled.div<{ lottoNum: number }>`
@@ -28,6 +29,13 @@ const LottoCircle = styled.div<{ lottoNum: number }>`
   justify-content: center;
   align-items: center;
   box-shadow: ${(props) => props.theme.color.shadowColor};
+  margin: 30px;
+
+  @media screen and (max-width: 720px) {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+  }
 `;
 
 function Lotto({ lottoKey, lottoNumber }: ILotto) {
